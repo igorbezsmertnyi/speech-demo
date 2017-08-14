@@ -1,0 +1,71 @@
+@import '../../../styles';
+
+.nav {
+  @include nav-shadow;
+
+  &__header {
+    a, h3 {
+      text-align: center;
+      font-size: 1.7em;
+      color: $green;
+      cursor: pointer;
+      text-decoration: none;
+      transition: ease-in-out .3s;
+
+      &:hover {
+        transition: ease-in-out .3s;
+        color: darken($green, 15%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+
+    &__item {
+      position: relative;
+      width: 100%;
+      height: 70px;
+      padding: 15px 30px;
+      border-bottom: 1px solid $white-smoke;
+      font-size: 22px;
+      font-family: Helvetica;
+      text-align: left;
+      color: #000;
+      text-decoration: none;
+      font-weight: lighter;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $studio;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &--avtive {
+        background-color: $studio;
+        color: #fff !important;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 20px;
+
+    a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.8em;
+      color: gray;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+}

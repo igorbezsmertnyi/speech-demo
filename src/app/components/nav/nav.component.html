@@ -1,0 +1,15 @@
+<nav class="nav">
+  <div class="nav__header">
+    <a href="#">
+      <h3>Speech JS</h3>
+    </a>
+  </div>
+  <div class="nav__container">
+    <a md-button href="#{{item.link}}" class="nav__container__item" *ngFor="let item of menuItems">
+      {{item.name}}
+    </a>
+  </div>
+  <div class="nav__footer">
+    <a href="https://www.npmjs.com/package/speech-js">npm package v {{version}}</a>
+  </div>
+</nav>
