@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
     { name: 'Demo', link: 'demo' }
   ]
 
-  version:string = '0.0.9'
+  version:string = '0.1.0'
 
   constructor() { }
 

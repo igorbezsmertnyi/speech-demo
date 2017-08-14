@@ -13,6 +13,9 @@ import { PageComponent } from './components/page/page.component'
 import { PagesContainerComponent } from './containers/pages-container/pages-container.component'
 import { WelcomeComponent } from './pages/welcome/welcome.component'
 import { InstalationComponent } from './pages/instalation/instalation.component'
+import { TitleComponent } from './components/title/title.component'
+import { CodeBlockComponent } from './components/code-block/code-block.component'
+import { QuickStartComponent } from './pages/quick-start/quick-start.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { InstalationComponent } from './pages/instalation/instalation.component'
     PageComponent,
     PagesContainerComponent,
     WelcomeComponent,
-    InstalationComponent
+    InstalationComponent,
+    TitleComponent,
+    CodeBlockComponent,
+    QuickStartComponent
   ],
   imports: [
     BrowserModule,

@@ -68,12 +68,18 @@ AppRoutingModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__containers_pages_container_pages_container_component__ = __webpack_require__("../../../../../src/app/containers/pages-container/pages-container.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_welcome_welcome_component__ = __webpack_require__("../../../../../src/app/pages/welcome/welcome.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_instalation_instalation_component__ = __webpack_require__("../../../../../src/app/pages/instalation/instalation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_title_title_component__ = __webpack_require__("../../../../../src/app/components/title/title.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_code_block_code_block_component__ = __webpack_require__("../../../../../src/app/components/code-block/code-block.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_quick_start_quick_start_component__ = __webpack_require__("../../../../../src/app/pages/quick-start/quick-start.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -100,7 +106,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__components_page_page_component__["a" /* PageComponent */],
             __WEBPACK_IMPORTED_MODULE_10__containers_pages_container_pages_container_component__["a" /* PagesContainerComponent */],
             __WEBPACK_IMPORTED_MODULE_11__pages_welcome_welcome_component__["a" /* WelcomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_instalation_instalation_component__["a" /* InstalationComponent */]
+            __WEBPACK_IMPORTED_MODULE_12__pages_instalation_instalation_component__["a" /* InstalationComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_title_title_component__["a" /* TitleComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_code_block_code_block_component__["a" /* CodeBlockComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_quick_start_quick_start_component__["a" /* QuickStartComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -145,6 +154,67 @@ StoreService = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/code-block/code-block.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"code-block\">\n  <code class=\"code-block__code\">\n    <ng-content></ng-content>\n  </code>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/code-block/code-block.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/indigo-pink.css"), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Saira+Condensed:100,200,300,400,500,600,700,800,900);", ""]);
+
+// module
+exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #24292e;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.code-block {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  background-color: rgba(27, 31, 35, 0.05);\n  padding: 20px;\n  box-shadow: 3px 3px 14px 2px rgba(0, 0, 0, 0.15); }\n  .code-block__code {\n    white-space: normal; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/code-block/code-block.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CodeBlockComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CodeBlockComponent = (function () {
+    function CodeBlockComponent() {
+    }
+    CodeBlockComponent.prototype.ngOnInit = function () { };
+    return CodeBlockComponent;
+}());
+CodeBlockComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'code-block',
+        template: __webpack_require__("../../../../../src/app/components/code-block/code-block.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/code-block/code-block.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], CodeBlockComponent);
+
+//# sourceMappingURL=code-block.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/nav/nav.component.html":
 /***/ (function(module, exports) {
 
@@ -161,7 +231,7 @@ exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":fa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Saira+Condensed:100,200,300,400,500,600,700,800,900);", ""]);
 
 // module
-exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #24292e;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.nav {\n  box-shadow: 3px 0px 5px 2px rgba(0, 0, 0, 0.25); }\n  .nav__header a, .nav__header h3 {\n    text-align: center;\n    font-size: 1.7em;\n    color: #2CC990;\n    cursor: pointer;\n    text-decoration: none;\n    transition: ease-in-out .3s; }\n    .nav__header a:hover, .nav__header h3:hover {\n      transition: ease-in-out .3s;\n      color: #1e8a63;\n      text-decoration: none; }\n  .nav__container {\n    position: relative; }\n    .nav__container__item {\n      position: relative;\n      width: 100%;\n      height: 70px;\n      padding: 15px 30px;\n      border-bottom: 1px solid #ECECEC;\n      font-size: 22px;\n      font-family: Helvetica;\n      text-align: left;\n      color: #000;\n      text-decoration: none;\n      font-weight: lighter;\n      cursor: pointer; }\n      .nav__container__item:hover {\n        background-color: #8E44AD;\n        color: #fff;\n        text-decoration: none; }\n      .nav__container__item--avtive {\n        background-color: #8E44AD;\n        color: #fff !important; }\n  .nav__footer {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    padding: 15px 20px; }\n    .nav__footer a {\n      font-family: 'Roboto', sans-serif;\n      font-size: 0.8em;\n      color: gray;\n      text-decoration: none; }\n      .nav__footer a:hover {\n        text-decoration: none;\n        color: #000; }\n", ""]);
+exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #24292e;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.nav {\n  box-shadow: 3px 0px 5px 2px rgba(0, 0, 0, 0.15); }\n  .nav__header a, .nav__header h3 {\n    text-align: center;\n    font-size: 1.7em;\n    color: #2CC990;\n    cursor: pointer;\n    text-decoration: none;\n    transition: ease-in-out .3s; }\n    .nav__header a:hover, .nav__header h3:hover {\n      transition: ease-in-out .3s;\n      color: #1e8a63;\n      text-decoration: none; }\n  .nav__container {\n    position: relative; }\n    .nav__container__item {\n      position: relative;\n      width: 100%;\n      height: 70px;\n      padding: 15px 30px;\n      border-bottom: 1px solid #ECECEC;\n      font-size: 22px;\n      font-family: Helvetica;\n      text-align: left;\n      color: #000;\n      text-decoration: none;\n      font-weight: lighter;\n      cursor: pointer; }\n      .nav__container__item:hover {\n        background-color: #8E44AD;\n        color: #fff;\n        text-decoration: none; }\n      .nav__container__item--avtive {\n        background-color: #8E44AD;\n        color: #fff !important; }\n  .nav__footer {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    padding: 15px 20px; }\n    .nav__footer a {\n      font-family: 'Roboto', sans-serif;\n      font-size: 0.8em;\n      color: gray;\n      text-decoration: none; }\n      .nav__footer a:hover {\n        text-decoration: none;\n        color: #000; }\n", ""]);
 
 // exports
 
@@ -199,7 +269,7 @@ var NavComponent = (function () {
             { name: 'Recognition', link: 'recognition' },
             { name: 'Demo', link: 'demo' }
         ];
-        this.version = '0.0.9';
+        this.version = '0.1.0';
     }
     NavComponent.prototype.ngOnInit = function () {
         var synthesis = __WEBPACK_IMPORTED_MODULE_1_speech_js___default.a.synthesis('welcome to speech js demo page', 'en-US');
@@ -283,6 +353,67 @@ PageComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/title/title.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"page-title\">\n  <h3>\n    <ng-content></ng-content>\n  </h3>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/title/title.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/indigo-pink.css"), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Saira+Condensed:100,200,300,400,500,600,700,800,900);", ""]);
+
+// module
+exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #24292e;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.page-title {\n  width: 80%;\n  border-bottom: 1px solid #ECECEC; }\n  .page-title h3 {\n    color: #000;\n    font-weight: 100;\n    font-size: 5em;\n    margin: 0; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/title/title.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TitleComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TitleComponent = (function () {
+    function TitleComponent() {
+    }
+    TitleComponent.prototype.ngOnInit = function () { };
+    return TitleComponent;
+}());
+TitleComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-title',
+        template: __webpack_require__("../../../../../src/app/components/title/title.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/title/title.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], TitleComponent);
+
+//# sourceMappingURL=title.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/containers/app/app.component.html":
 /***/ (function(module, exports) {
 
@@ -357,7 +488,7 @@ var _a;
 /***/ "../../../../../src/app/containers/pages-container/pages-container.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<welcome></welcome>\n<instalation></instalation>\n"
+module.exports = "<welcome></welcome>\n<instalation></instalation>\n<quick-start></quick-start>\n"
 
 /***/ }),
 
@@ -418,7 +549,7 @@ PagesContainerComponent = __decorate([
 /***/ "../../../../../src/app/pages/instalation/instalation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<page pageId=\"instalation\">\n  <p>\n    instalation works!\n  </p>\n</page>\n"
+module.exports = "<page pageId=\"instalation\">\n  <div class=\"instalation\">\n    <app-title>\n      Instaltion\n    </app-title>\n\n    <div class=\"instalation__content\">\n      <code-block>\n        npm install --save speech-js\n      </code-block>\n      <span>or</span>\n      <code-block>\n        yarn add speech-js\n      </code-block>\n    </div>\n  </div>\n</page>\n"
 
 /***/ }),
 
@@ -427,10 +558,11 @@ module.exports = "<page pageId=\"instalation\">\n  <p>\n    instalation works!\n
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
-
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/indigo-pink.css"), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Saira+Condensed:100,200,300,400,500,600,700,800,900);", ""]);
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #24292e;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.instalation {\n  position: relative;\n  width: 100%;\n  height: calc(100% - 127px); }\n  .instalation__content {\n    width: 100%;\n    height: 100%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-flow: column;\n            flex-flow: column; }\n    .instalation__content code-block {\n      font-size: 2em; }\n    .instalation__content span {\n      color: #8E44AD;\n      margin: 30px 0;\n      font-family: Helvetica, sans-serif;\n      font-weight: 400;\n      font-size: 1.5em; }\n", ""]);
 
 // exports
 
@@ -472,6 +604,66 @@ InstalationComponent = __decorate([
 ], InstalationComponent);
 
 //# sourceMappingURL=instalation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/quick-start/quick-start.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<page pageId=\"quick-start\">\n  <div class=\"quick-start\">\n    <app-title>\n      Quick Start\n    </app-title>\n\n    <div class=\"quick-start__content\">\n      <code-block>\n        import speech from 'speech-js'\n        <br />\n        <br />\n        speech.synthesis('hello world', 'en-US')\n        <br />\n        <br />\n        const recognition = speech.recognition('en-US')<br />\n        recognition.start()<br />\n        recognition.onresult = e => {{ '{' }}<br />\n        <dd>let result = e.results[0][0].transcript<br /></dd>\n        <dd>speech.synthesis(result, 'en-US')<br /></dd>\n        {{ '}' }}<br />\n      </code-block>\n    </div>\n  </div>\n</page>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/quick-start/quick-start.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".quick-start {\n  width: 100%;\n  height: 100%; }\n  .quick-start__content {\n    width: 100%;\n    height: calc(100% - 127px);\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center; }\n    .quick-start__content code-block {\n      font-size: 2.2em; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/quick-start/quick-start.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuickStartComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var QuickStartComponent = (function () {
+    function QuickStartComponent() {
+    }
+    QuickStartComponent.prototype.ngOnInit = function () { };
+    return QuickStartComponent;
+}());
+QuickStartComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'quick-start',
+        template: __webpack_require__("../../../../../src/app/pages/quick-start/quick-start.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/pages/quick-start/quick-start.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], QuickStartComponent);
+
+//# sourceMappingURL=quick-start.component.js.map
 
 /***/ }),
 

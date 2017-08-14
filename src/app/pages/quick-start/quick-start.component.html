@@ -1,0 +1,24 @@
+<page pageId="quick-start">
+  <div class="quick-start">
+    <app-title>
+      Quick Start
+    </app-title>
+
+    <div class="quick-start__content">
+      <code-block>
+        import speech from 'speech-js'
+        <br />
+        <br />
+        speech.synthesis('hello world', 'en-US')
+        <br />
+        <br />
+        const recognition = speech.recognition('en-US')<br />
+        recognition.start()<br />
+        recognition.onresult = e => {{ '{' }}<br />
+        <dd>let result = e.results[0][0].transcript<br /></dd>
+        <dd>speech.synthesis(result, 'en-US')<br /></dd>
+        {{ '}' }}<br />
+      </code-block>
+    </div>
+  </div>
+</page>

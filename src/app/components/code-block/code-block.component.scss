@@ -1,0 +1,13 @@
+@import '../../../styles';
+
+.code-block {
+  width: fit-content;
+  background-color: $code;
+  padding: 20px;
+
+  @include code-shadow;
+
+  &__code {
+    white-space: normal;
+  }
+}
