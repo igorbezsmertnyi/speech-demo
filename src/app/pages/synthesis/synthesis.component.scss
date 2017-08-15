@@ -1,0 +1,58 @@
+@import '../../../styles';
+
+.synthesis {
+  width: 100%;
+  height: 100%;
+
+  &__container {
+    width: 100%;
+    height: calc(100% - 127px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__code {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.7em;
+      margin-top: 70px;
+      color: lighten($git-black, 50%);
+    }
+
+    &__form {
+      width: 85%;
+      margin-top: 120px;
+
+      &__submit {
+        display: flex;
+        justify-content: center;
+
+        button {
+          background-color: $green;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 1.1px;
+          font-size: 1em;
+          padding: 10px 40px;
+        }
+      }
+    }
+
+    &__row {
+      width: 100%;
+      margin-top: 40px;
+      display: inline-flex;
+    }
+
+    &__col {
+      width: 50%;
+    }
+
+    md-select {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<page pageId="synthesis">
+  <div class="synthesis">
+    <app-title>
+      Speech Synthesis
+    </app-title>
+
+    <div class="synthesis__container">
+      <div class="synthesis__container__code">
+        <code>
+          speech.synthesis({{text}}, {{ selectedLang ? selectedLang : selectedVoiceName }}, {{rate}}, {{volume}}, {{pitch}})
+        </code>
+      </div>
+      <div class="synthesis__container__form">
+        <md-input-container>
+          <input mdInput [(ngModel)]="text" placeholder="text" [value]="text" autoFocus>
+        </md-input-container>
+
+        <div class="synthesis__container__row">
+          <div class="synthesis__container__col">
+            <div class="slider">
+              <label>Rate</label>
+              <md-slider min="0.1" max="10" step="0.1" [value]="rate" (input)="setRate($event)"></md-slider>
+            </div>
+
+            <div class="slider">
+              <label>Volume</label>
+              <md-slider min="0" max="1" step="0.1" [value]="volume" (input)="setVolume($event)"></md-slider>
+            </div>
+
+            <div class="slider">
+              <label>Pitch</label>
+              <md-slider min="0" max="2" step="0.1" [value]="pitch" (input)="setPitch($event)"></md-slider>
+            </div>
+          </div>
+
+          <div class="synthesis__container__col">
+            <md-select placeholder="Select Langs" [(ngModel)]="selectedLang" (change)="selectLang($event)">
+              <md-option *ngFor="let lang of langs" [value]="lang">
+                {{lang}}
+              </md-option>
+            </md-select>
+
+            <md-select placeholder="Select Voice" [(ngModel)]="selectedVoiceName" (change)="selectVoice($event)">
+              <md-option *ngFor="let voice of voices" [value]="voice.name">
+                {{voice.name}} {{voice.lang}}
+              </md-option>
+            </md-select>
+          </div>
+        </div>
+
+        <div class="synthesis__container__form__submit synthesis__container__row">
+          <button md-button (click)="speck()">Speck</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</page>

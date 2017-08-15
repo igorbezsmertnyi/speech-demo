@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import speech from 'speech-js'
-
 
 @Component({
   selector: 'app-nav',
@@ -10,9 +8,9 @@ import speech from 'speech-js'
 
 export class NavComponent implements OnInit {
   menuItems: any = [
-    { name: 'Instalation', link: 'instalation' },
-    { name: 'Quick Start', link: 'quick-start' },
-    { name: 'Synthesis', link: 'synthesis' },
+    { name: 'Instalation', link: '#instalation' },
+    { name: 'Quick Start', link: '#quick-start' },
+    { name: 'Synthesis', link: '/speech-demo/synthesis' },
     { name: 'Recognition', link: 'recognition' },
     { name: 'Demo', link: 'demo' }
   ]
@@ -21,7 +19,5 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    const synthesis = speech.synthesis('welcome to speech js demo page', 'en-US')
-  }
+  ngOnInit() { }
 }
