@@ -32,6 +32,23 @@
         <div class="recognition__content__item">
           <div class="recognition__content__item--control">
             <div class="recognition__content__item__header">
+              <span>Set Color</span>
+              <ul>
+                <li>tell some <mark>color</mark> name</li>
+              </ul>
+            </div>
+            <button md-button (click)="setColorAction()">Run</button>
+          </div>
+          <div class="recognition__content__item--desc">
+            <div #color class="recognition__content__item__color">
+              <span #colorName>white</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="recognition__content__item">
+          <div class="recognition__content__item--control">
+            <div class="recognition__content__item__header">
               <span>Player</span>
               <ul>
                 <li>say <mark>play</mark> for start play video</li>

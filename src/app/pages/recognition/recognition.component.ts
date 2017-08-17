@@ -10,6 +10,8 @@ import uniq from 'lodash/uniq'
 
 export class RecognitionComponent implements OnInit {
   @ViewChild('video') video: ElementRef
+  @ViewChild('color') color: ElementRef
+  @ViewChild('colorName') colorName: ElementRef
 
   langs: any = []
   recognition: any
@@ -49,6 +51,20 @@ export class RecognitionComponent implements OnInit {
         this.video.nativeElement.pause()
         this.video.nativeElement.currentTime = 0
       }
+      console.log(res)
+    }
+  }
+
+  setColorAction() {
+    this.recognition = speech.recognition('en-US')
+    this.recognition.start()
+    this.colorName.nativeElement.innerHTML = ''
+    this.color.nativeElement.style.backgroundColor = 'white'
+
+    this.recognition.onresult = e => {
+      let res = e.results[0][0].transcript.replace(/\s/g,'')
+      this.colorName.nativeElement.innerHTML = res
+      this.color.nativeElement.style.backgroundColor = res
     }
   }
 }
