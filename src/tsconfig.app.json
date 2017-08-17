@@ -8,6 +8,9 @@
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "404.html",
+    "robot.txt",
+    "sitemap.xml"
   ]
 }
