@@ -19,9 +19,11 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__containers_pages_container_pages_container_component__ = __webpack_require__("../../../../../src/app/containers/pages-container/pages-container.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_synthesis_synthesis_component__ = __webpack_require__("../../../../../src/app/pages/synthesis/synthesis.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__containers_pages_container_pages_container_component__ = __webpack_require__("../../../../../src/app/containers/pages-container/pages-container.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_synthesis_synthesis_component__ = __webpack_require__("../../../../../src/app/pages/synthesis/synthesis.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_recognition_recognition_component__ = __webpack_require__("../../../../../src/app/pages/recognition/recognition.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -32,9 +34,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var routes = [
-    { path: '', children: [], component: __WEBPACK_IMPORTED_MODULE_2__containers_pages_container_pages_container_component__["a" /* PagesContainerComponent */] },
-    { path: 'synthesis', component: __WEBPACK_IMPORTED_MODULE_3__pages_synthesis_synthesis_component__["a" /* SynthesisComponent */] }
+    { path: '', children: [], component: __WEBPACK_IMPORTED_MODULE_3__containers_pages_container_pages_container_component__["a" /* PagesContainerComponent */] },
+    { path: 'synthesis', component: __WEBPACK_IMPORTED_MODULE_4__pages_synthesis_synthesis_component__["a" /* SynthesisComponent */] },
+    { path: 'recognition', component: __WEBPACK_IMPORTED_MODULE_5__pages_recognition_recognition_component__["a" /* RecognitionComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -43,8 +48,9 @@ var AppRoutingModule = (function () {
 }());
 AppRoutingModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */].forRoot(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* RouterModule */]],
+        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["a" /* APP_BASE_HREF */], useValue: window['_app_base'] || '/' }]
     })
 ], AppRoutingModule);
 
@@ -76,12 +82,14 @@ AppRoutingModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_code_block_code_block_component__ = __webpack_require__("../../../../../src/app/components/code-block/code-block.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_quick_start_quick_start_component__ = __webpack_require__("../../../../../src/app/pages/quick-start/quick-start.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_synthesis_synthesis_component__ = __webpack_require__("../../../../../src/app/pages/synthesis/synthesis.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_recognition_recognition_component__ = __webpack_require__("../../../../../src/app/pages/recognition/recognition.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -117,7 +125,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__components_title_title_component__["a" /* TitleComponent */],
             __WEBPACK_IMPORTED_MODULE_15__components_code_block_code_block_component__["a" /* CodeBlockComponent */],
             __WEBPACK_IMPORTED_MODULE_16__pages_quick_start_quick_start_component__["a" /* QuickStartComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_synthesis_synthesis_component__["a" /* SynthesisComponent */]
+            __WEBPACK_IMPORTED_MODULE_17__pages_synthesis_synthesis_component__["a" /* SynthesisComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__pages_recognition_recognition_component__["a" /* RecognitionComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -279,8 +288,7 @@ var NavComponent = (function () {
             { name: 'Instalation', link: '#instalation' },
             { name: 'Quick Start', link: '#quick-start' },
             { name: 'Synthesis', link: '/speech-demo/synthesis' },
-            { name: 'Recognition', link: 'recognition' },
-            { name: 'Demo', link: 'demo' }
+            { name: 'Recognition', link: '/speech-demo/recognition' }
         ];
         this.version = '0.1.0';
     }
@@ -678,6 +686,115 @@ QuickStartComponent = __decorate([
 ], QuickStartComponent);
 
 //# sourceMappingURL=quick-start.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/recognition/recognition.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<page pageId=\"recognition\">\n  <div class=\"recognition\">\n    <app-title>Speech Recognition</app-title>\n\n    <div class=\"recognition__content\">\n      <div class=\"recognition__content__list\">\n        <div class=\"recognition__content__item\">\n          <div class=\"recognition__content__item--control\">\n            <div class=\"recognition__content__item__header\">\n              <span>Repeat</span>\n            </div>\n            <div class=\"recognition__content__item__select\">\n              <md-select placeholder=\"Select Langs\" [(ngModel)]=\"selectedLang\" (change)=\"selectLang($event)\" autoFocus>\n                <md-option *ngFor=\"let lang of langs\" [value]=\"lang\">\n                  {{lang}}\n                </md-option>\n              </md-select>\n            </div>\n            <button md-button (click)=\"repeatAction()\">Start repeat</button>\n          </div>\n          <div class=\"recognition__content__item--desc\">\n            <code-block>\n              const recognition = speech.recognition({{selectedLang}})\n              <br />\n              recognition.onresult = e => {{ '{' }}<br />\n              <dd>speech.synthesis(e.results[0][0].transcript, {{selectedLang}})<br /></dd>\n              {{ '}' }}\n            </code-block>\n          </div>\n        </div>\n\n        <div class=\"recognition__content__item\">\n          <div class=\"recognition__content__item--control\">\n            <div class=\"recognition__content__item__header\">\n              <span>Player</span>\n              <ul>\n                <li>say <mark>play</mark> for start play video</li>\n                <li>say <mark>pause</mark> for pause video</li>\n                <li>say <mark>stop</mark> for stop video</li>\n              </ul>\n            </div>\n            <button md-button (click)=\"playAction()\">Start play</button>\n          </div>\n          <div class=\"recognition__content__item--desc\">\n            <video #video height=\"240px\" loop>\n              <source src=\"assets/video.mp4\" type=\"video/mp4\">\n            </video>\n          </div>\n        </div>\n\n\n      </div>\n    </div>\n  </div>\n</page>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/recognition/recognition.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/indigo-pink.css"), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Saira+Condensed:100,200,300,400,500,600,700,800,900);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i);", ""]);
+
+// module
+exports.push([module.i, "body,\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\nnav {\n  position: fixed;\n  width: 240px;\n  height: 100vh;\n  left: 0;\n  top: 0; }\n\nmain {\n  position: relative;\n  width: calc(100vw - 240px);\n  left: 240px; }\n\n.git-link {\n  position: fixed;\n  top: -100px;\n  right: -100px;\n  width: 200px;\n  height: 200px;\n  background: #8E44AD;\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n  z-index: 200; }\n  .git-link:hover img {\n    transition: ease-in-out .4s;\n    opacity: 0.7; }\n  .git-link img {\n    margin-top: 135px;\n    margin-left: 75px;\n    width: 50px;\n    height: 50px;\n    -o-object-fit: contain;\n       object-fit: contain;\n    transition: ease-in-out .4s;\n    opacity: 1; }\n\nh3 {\n  font-family: 'Saira Condensed', sans-serif; }\n\nlabel {\n  font: 14px system-ui !important; }\n\nmd-input-container {\n  width: 100%; }\n\n.slider label {\n  min-width: 70px;\n  margin-right: 10px; }\n\nmd-slider {\n  min-width: 250px; }\n\ninput {\n  font-family: Helvetica, Arial, sans-serif; }\n\n@-webkit-keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@keyframes fade-in-left {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(-100px);\n            transform: translateX(-100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateX(0);\n            transform: rotateX(0); } }\n\n@-webkit-keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n@keyframes fade-in-bottom {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateY(100px);\n            transform: translateY(100px); }\n  100% {\n    opacity: 1;\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0); } }\n\n.recognition {\n  width: 100%;\n  height: 100%; }\n  .recognition__content {\n    width: 100%;\n    height: calc(100% - 127px); }\n    .recognition__content__list {\n      width: 100%;\n      padding-top: 50px;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column; }\n    .recognition__content__item {\n      max-width: 800px;\n      width: 100%;\n      display: -webkit-inline-box;\n      display: -ms-inline-flexbox;\n      display: inline-flex;\n      margin-bottom: 50px; }\n      .recognition__content__item--control {\n        width: 30%;\n        min-width: 150px;\n        border-right: 1px solid #ECECEC;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center; }\n        .recognition__content__item--control button {\n          width: -webkit-fit-content;\n          width: -moz-fit-content;\n          width: fit-content;\n          background-color: #2CC990;\n          color: #fff;\n          text-transform: uppercase;\n          font-weight: 300;\n          letter-spacing: 1.1px;\n          font-size: 0.8em; }\n      .recognition__content__item--desc {\n        width: 70%;\n        padding: 8px 35px; }\n      .recognition__content__item__select {\n        width: 100%;\n        padding-top: 10px;\n        padding-bottom: 10px; }\n      .recognition__content__item__header {\n        width: 100%;\n        margin-bottom: 12px; }\n        .recognition__content__item__header ul {\n          margin-top: 10px;\n          padding-left: 18px; }\n        .recognition__content__item__header li {\n          color: #738291;\n          font-family: 'Open Sans', sans-serif;\n          font-size: 0.8em;\n          padding-left: 5px;\n          margin: 0; }\n        .recognition__content__item__header span {\n          color: #24292e;\n          font-size: 1.5em;\n          font-family: 'Open Sans', sans-serif;\n          font-weight: lighter; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/recognition/recognition.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecognitionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_speech_js__ = __webpack_require__("../../../../speech-js/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_speech_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_speech_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_uniq__ = __webpack_require__("../../../../lodash/uniq.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash_uniq___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash_uniq__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RecognitionComponent = (function () {
+    function RecognitionComponent() {
+        var _this = this;
+        this.langs = [];
+        this.selectedLang = 'en-US';
+        speechSynthesis.onvoiceschanged = function () {
+            _this.langs = __WEBPACK_IMPORTED_MODULE_2_lodash_uniq___default()(window.speechSynthesis.getVoices().map(function (voice) { return voice.lang; }));
+        };
+    }
+    RecognitionComponent.prototype.ngOnInit = function () { };
+    RecognitionComponent.prototype.selectLang = function (v) {
+        this.selectedLang = v.value;
+    };
+    RecognitionComponent.prototype.repeatAction = function () {
+        var _this = this;
+        this.recognition = __WEBPACK_IMPORTED_MODULE_1_speech_js___default.a.recognition(this.selectedLang);
+        this.recognition.start();
+        this.recognition.onresult = function (e) {
+            __WEBPACK_IMPORTED_MODULE_1_speech_js___default.a.synthesis(e.results[0][0].transcript, _this.selectedLang);
+        };
+    };
+    RecognitionComponent.prototype.playAction = function () {
+        var _this = this;
+        this.recognition = __WEBPACK_IMPORTED_MODULE_1_speech_js___default.a.recognition('en-US');
+        this.recognition.start();
+        this.recognition.onresult = function (e) {
+            var res = e.results[0][0].transcript;
+            if (res === 'play') {
+                _this.video.nativeElement.play();
+            }
+            else if (res === 'pause') {
+                _this.video.nativeElement.pause();
+            }
+            else if (res === 'stop') {
+                _this.video.nativeElement.pause();
+                _this.video.nativeElement.currentTime = 0;
+            }
+        };
+    };
+    return RecognitionComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('video'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
+], RecognitionComponent.prototype, "video", void 0);
+RecognitionComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'recognition',
+        template: __webpack_require__("../../../../../src/app/pages/recognition/recognition.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/pages/recognition/recognition.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], RecognitionComponent);
+
+var _a;
+//# sourceMappingURL=recognition.component.js.map
 
 /***/ }),
 

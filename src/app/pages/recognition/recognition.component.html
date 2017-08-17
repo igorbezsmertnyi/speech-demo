@@ -1,0 +1,55 @@
+<page pageId="recognition">
+  <div class="recognition">
+    <app-title>Speech Recognition</app-title>
+
+    <div class="recognition__content">
+      <div class="recognition__content__list">
+        <div class="recognition__content__item">
+          <div class="recognition__content__item--control">
+            <div class="recognition__content__item__header">
+              <span>Repeat</span>
+            </div>
+            <div class="recognition__content__item__select">
+              <md-select placeholder="Select Langs" [(ngModel)]="selectedLang" (change)="selectLang($event)" autoFocus>
+                <md-option *ngFor="let lang of langs" [value]="lang">
+                  {{lang}}
+                </md-option>
+              </md-select>
+            </div>
+            <button md-button (click)="repeatAction()">Start repeat</button>
+          </div>
+          <div class="recognition__content__item--desc">
+            <code-block>
+              const recognition = speech.recognition({{selectedLang}})
+              <br />
+              recognition.onresult = e => {{ '{' }}<br />
+              <dd>speech.synthesis(e.results[0][0].transcript, {{selectedLang}})<br /></dd>
+              {{ '}' }}
+            </code-block>
+          </div>
+        </div>
+
+        <div class="recognition__content__item">
+          <div class="recognition__content__item--control">
+            <div class="recognition__content__item__header">
+              <span>Player</span>
+              <ul>
+                <li>say <mark>play</mark> for start play video</li>
+                <li>say <mark>pause</mark> for pause video</li>
+                <li>say <mark>stop</mark> for stop video</li>
+              </ul>
+            </div>
+            <button md-button (click)="playAction()">Start play</button>
+          </div>
+          <div class="recognition__content__item--desc">
+            <video #video height="240px" loop>
+              <source src="assets/video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</page>

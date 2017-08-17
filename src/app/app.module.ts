@@ -19,6 +19,7 @@ import { TitleComponent } from './components/title/title.component'
 import { CodeBlockComponent } from './components/code-block/code-block.component'
 import { QuickStartComponent } from './pages/quick-start/quick-start.component'
 import { SynthesisComponent } from './pages/synthesis/synthesis.component'
+import { RecognitionComponent } from './pages/recognition/recognition.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SynthesisComponent } from './pages/synthesis/synthesis.component'
     TitleComponent,
     CodeBlockComponent,
     QuickStartComponent,
-    SynthesisComponent
+    SynthesisComponent,
+    RecognitionComponent
   ],
   imports: [
     BrowserModule,
