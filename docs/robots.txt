@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.southernkitchen.com/sitemap.xml.gz
+Sitemap: https://igorbezsmertnyi.github.io/speech-demo/sitemap.xml.gz
